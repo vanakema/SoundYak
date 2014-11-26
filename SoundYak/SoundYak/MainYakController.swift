@@ -16,23 +16,25 @@ class MainYakController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     var sampleTableViewData:NSMutableArray! = NSMutableArray()
     var votedAlready:NSMutableArray = NSMutableArray()
+    var expandedPosts:NSMutableArray = NSMutableArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         let uniqueTemp:NSArray! = [41,13,32,2,75,43,76,3453,321,453]
-        let postnamesTemp:NSArray! = ["JackU: take u there", "Bondax: Kiesza remixes", "James Brown: I invented funk", "Fatboy slim: Weapon of choice more walken edition", "Liquicity: mix tape 2","JackU: take u there", "Bondax: Kiesza remixes", "James Brown: I invented funk", "Fatboy slim: Weapon of choice more walken edition", "Liquicity: mix tape 2"]
+        let postnamesTemp:NSArray! = ["St.Lucia - Elevate (Audio)", "Star Slinger: Elizabeth Frasier (Cocteau Remix)", "Mungo Jerry: In the summer time", "Skream: Anticipate ft. Sam Frank", "Theophilus London: Figure it out (Disco Razer Remix)", "INSTRUMENTAL: REAL ROCK RIDDIM", "Surfer Interview", "Sugar Minott: Oh Mr DC", "Dex Interview: Torstein"]
         let timestampTemp:NSArray! = ["45s", "12m", "5h", "7m", "2d","45s", "12m", "5h", "7m", "2d"]
         let tagsTemp:NSArray! = [["$hype","$trill","$maddecent"],["$garage","$chill","$skylinevibe"],["$royal"],["$walken"],["$transcend","$soul"],["$hype","$trill","$maddecent"],["$garage","$chill","$skylinevibe"],["$royal"],["$walken"],["$transcend","$soul"]]
         let upvoteTemp:NSArray! = [132,24,10,2120,5,132,24,10,2120,5]
         let downvoteTemp:NSArray! = [12,2,18,1209,0,12,2,18,1209,0]
+        let urlTemp:NSArray! = ["http://youtu.be/n-sKMiNqTjs","https://www.youtube.com/watch?v=tqz208BBi6k","https://www.youtube.com/watch?v=kzqRvi8vAvA","https://www.youtube.com/watch?v=yG0oBPtyNb0","https://www.youtube.com/watch?v=tgU0Nw6cZOI","https://www.youtube.com/watch?v=vtvFgSk2_ug","https://www.youtube.com/watch?v=3S7WAcTi1RM","https://www.youtube.com/watch?v=hJdF8DJ70Dc","https://www.youtube.com/watch?v=TCQgB9MFTjE","https://www.youtube.com/watch?v=PiCrjJI3baw"]
         
         var cnt = postnamesTemp.count
         for idx in 0...(cnt-1)
         {
             NSLog("creating and converting \(idx)")
-            var tempDict:NSDictionary! = NSDictionary(objects:[postnamesTemp[idx],timestampTemp[idx],tagsTemp[idx],upvoteTemp[idx],downvoteTemp[idx], uniqueTemp[idx]], forKeys: ["postname","timestamp","tags","upvotes","downvotes","songid"])
+            var tempDict:NSDictionary! = NSDictionary(objects:[postnamesTemp[idx],timestampTemp[idx],tagsTemp[idx],upvoteTemp[idx],downvoteTemp[idx], uniqueTemp[idx], urlTemp[idx]], forKeys: ["postname","timestamp","tags","upvotes","downvotes","songid","posturl"])
             var yak:YakPostObject = initWithAJSONObject(tempDict)
             NSLog("appending to page data")
             sampleTableViewData.addObject(yak)
@@ -105,9 +107,33 @@ class MainYakController: UIViewController, UITableViewDelegate, UITableViewDataS
             cell.fleekVoteButton.enabled = true
         }
         
-        //cell.webView = UIWebView(frame: CGRect(x: 5, y: <#CGFloat#>, width: <#CGFloat#>, height: <#CGFloat#>))
+        if (cell.frame.height >= 200)
+        {
+            cell.webView = UIWebView(frame: CGRectMake(10, 100, self.view.frame.size.width-20, 140))
+            var postURL:NSURL = NSURL(string: (sampleTableViewData[indexPath.row] as YakPostObject).posturl)!
+            cell.webView.loadRequest(NSURLRequest(URL: postURL))
+            cell.contentView.addSubview(cell.webView)
+        }
+        
+        //cell.webView = UIWebView(frame: CGRect(x: 5, y: , width: , height: ))
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if expandedPosts.containsObject(indexPath)
+        {
+            return 250
+        }
+        else
+        {
+            return 104
+        }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        expandedPosts.addObject(indexPath)
+        self.YakTableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
     }
     
     @IBAction func upvoteSong(button:UIButton)
