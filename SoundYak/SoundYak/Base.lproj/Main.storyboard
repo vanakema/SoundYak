@@ -59,7 +59,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dfb-rj-BdH">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dfb-rj-BdH">
                                                     <rect key="frame" x="256" y="41" width="51" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="17"/>
@@ -67,14 +67,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time stamp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zDf-UX-esd">
-                                                    <rect key="frame" x="8" y="74" width="80" height="24"/>
+                                                    <rect key="frame" x="8" y="74" width="46" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tags tags tags" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hSG-CC-Ef0">
-                                                    <rect key="frame" x="112" y="74" width="136" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tags tags tags" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hSG-CC-Ef0">
+                                                    <rect key="frame" x="62" y="74" width="186" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -111,7 +111,11 @@
                                 <segment title="Hot"/>
                             </segments>
                         </segmentedControl>
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="dvp-8B-Dwd"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="dvp-8B-Dwd">
+                            <connections>
+                                <segue destination="jLq-1w-cTD" kind="push" id="ghl-qr-aiL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="YakTableView" destination="ydn-7I-ZsF" id="5xE-Qi-U7p"/>
@@ -122,6 +126,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="182" y="349"/>
+        </scene>
+        <!--Submit Link-->
+        <scene sceneID="y6l-qW-S6J">
+            <objects>
+                <viewController id="jLq-1w-cTD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ybn-Tn-eqr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Submit Link" id="UCM-CI-qu4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dcp-YB-bpj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="656" y="349"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
