@@ -17,6 +17,6 @@ class YakTableViewCell: UITableViewCell {
     @IBOutlet var laameVoteButton:UIButton!
     @IBOutlet var netVotesLabel:UILabel!
     
-
+    var webView:UIWebView!
 
 }

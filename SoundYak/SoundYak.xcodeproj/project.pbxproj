@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E5AF7601A259C2900ECF6FE /* YakTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AF75F1A259C2900ECF6FE /* YakTableViewCell.swift */; };
 		0E5AF7621A25A1AA00ECF6FE /* YakPostObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AF7611A25A1AA00ECF6FE /* YakPostObject.swift */; };
+		0E5AF7641A25BA3B00ECF6FE /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AF7631A25BA3B00ECF6FE /* PostViewController.swift */; };
 		0E5BBEB31A2593F2003EAE9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5BBEB21A2593F2003EAE9B /* AppDelegate.swift */; };
 		0E5BBEB81A2593F2003EAE9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E5BBEB61A2593F2003EAE9B /* Main.storyboard */; };
 		0E5BBEBA1A2593F2003EAE9B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E5BBEB91A2593F2003EAE9B /* Images.xcassets */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		0E5AF75F1A259C2900ECF6FE /* YakTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakTableViewCell.swift; sourceTree = "<group>"; };
 		0E5AF7611A25A1AA00ECF6FE /* YakPostObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakPostObject.swift; sourceTree = "<group>"; };
+		0E5AF7631A25BA3B00ECF6FE /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		0E5BBEAD1A2593F1003EAE9B /* SoundYak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundYak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E5BBEB11A2593F2003EAE9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E5BBEB21A2593F2003EAE9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E5AF7651A25BA8200ECF6FE /* post page */ = {
+			isa = PBXGroup;
+			children = (
+				0E5AF7631A25BA3B00ECF6FE /* PostViewController.swift */,
+			);
+			name = "post page";
+			sourceTree = "<group>";
+		};
 		0E5BBEA41A2593F1003EAE9B = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +94,7 @@
 				0E5BBEB21A2593F2003EAE9B /* AppDelegate.swift */,
 				0E5BBED41A259490003EAE9B /* main yak page */,
 				0E5BBEB61A2593F2003EAE9B /* Main.storyboard */,
+				0E5AF7651A25BA8200ECF6FE /* post page */,
 				0E5BBEB91A2593F2003EAE9B /* Images.xcassets */,
 				0E5BBEBB1A2593F2003EAE9B /* LaunchScreen.xib */,
 				0E5BBEB01A2593F1003EAE9B /* Supporting Files */,
@@ -230,6 +241,7 @@
 				0E5BBED31A259487003EAE9B /* MainYakController.swift in Sources */,
 				0E5BBEB31A2593F2003EAE9B /* AppDelegate.swift in Sources */,
 				0E5AF7601A259C2900ECF6FE /* YakTableViewCell.swift in Sources */,
+				0E5AF7641A25BA3B00ECF6FE /* PostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

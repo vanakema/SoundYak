@@ -16,7 +16,7 @@ class YakPostObject: NSObject {
     var downvotes:NSInteger!
     var tags:NSArray!
     var timestamp:NSString!
-    
+    var songid:NSInteger!
 }
 
 func initWithAJSONObject(jsonObj:NSDictionary!) -> YakPostObject
@@ -36,6 +36,7 @@ func initWithAJSONObject(jsonObj:NSDictionary!) -> YakPostObject
         NSLog("read tags")
     yak.timestamp = jsonObj.valueForKey("timestamp") as NSString
         NSLog("read timestamp")
+    yak.songid = jsonObj.valueForKey("songid") as NSInteger
     NSLog("finished conforming json object, finalstruct:\n%@",yak)
     return yak
 }
