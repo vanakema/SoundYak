@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0E5BBEB31A2593F2003EAE9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5BBEB21A2593F2003EAE9B /* AppDelegate.swift */; };
-		0E5BBEB51A2593F2003EAE9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5BBEB41A2593F2003EAE9B /* ViewController.swift */; };
 		0E5BBEB81A2593F2003EAE9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E5BBEB61A2593F2003EAE9B /* Main.storyboard */; };
 		0E5BBEBA1A2593F2003EAE9B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E5BBEB91A2593F2003EAE9B /* Images.xcassets */; };
 		0E5BBEBD1A2593F2003EAE9B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E5BBEBB1A2593F2003EAE9B /* LaunchScreen.xib */; };
 		0E5BBEC91A2593F2003EAE9B /* SoundYakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5BBEC81A2593F2003EAE9B /* SoundYakTests.swift */; };
+		0E5BBED31A259487003EAE9B /* MainYakController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5BBED21A259487003EAE9B /* MainYakController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +29,13 @@
 		0E5BBEAD1A2593F1003EAE9B /* SoundYak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundYak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E5BBEB11A2593F2003EAE9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E5BBEB21A2593F2003EAE9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0E5BBEB41A2593F2003EAE9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0E5BBEB71A2593F2003EAE9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E5BBEB91A2593F2003EAE9B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0E5BBEBC1A2593F2003EAE9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		0E5BBEC21A2593F2003EAE9B /* SoundYakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundYakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E5BBEC71A2593F2003EAE9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E5BBEC81A2593F2003EAE9B /* SoundYakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundYakTests.swift; sourceTree = "<group>"; };
+		0E5BBED21A259487003EAE9B /* MainYakController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainYakController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				0E5BBEB21A2593F2003EAE9B /* AppDelegate.swift */,
-				0E5BBEB41A2593F2003EAE9B /* ViewController.swift */,
+				0E5BBED41A259490003EAE9B /* main yak page */,
 				0E5BBEB61A2593F2003EAE9B /* Main.storyboard */,
 				0E5BBEB91A2593F2003EAE9B /* Images.xcassets */,
 				0E5BBEBB1A2593F2003EAE9B /* LaunchScreen.xib */,
@@ -110,6 +110,14 @@
 				0E5BBEC71A2593F2003EAE9B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0E5BBED41A259490003EAE9B /* main yak page */ = {
+			isa = PBXGroup;
+			children = (
+				0E5BBED21A259487003EAE9B /* MainYakController.swift */,
+			);
+			name = "main yak page";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E5BBEB51A2593F2003EAE9B /* ViewController.swift in Sources */,
+				0E5BBED31A259487003EAE9B /* MainYakController.swift in Sources */,
 				0E5BBEB31A2593F2003EAE9B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
